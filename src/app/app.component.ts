@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Brillio-Angular8';
+  name = 'Angular Training';
+  clickMessage = 'Morning';
+
+  onClickMe() {
+    console.log("Event Fired !!!1");
+    this.clickMessage = "Training ! is Active";
+
+  }
 }
