@@ -35,12 +35,14 @@
     </div>
     <div class="col-sm">
         <div>
-            <table>
+            <table *ngIf="show">
+                <tr>
+                    <th id="custName"> <b>Customer Name</b></th>
+                    <th id="custAge"> <b>Customer Age</b></th>
+                </tr>
                 <tr *ngFor="let cust of custArray; let i = index">
-                    <td><b>Name</b> :</td>
-                    <td>{{cust.name | uppercase}}</td>
-                    <td><b>Age</b> :</td>
-                    <td>{{cust.age}}</td>
+                    <td id="custName">{{cust.name | uppercase}}</td>
+                    <td id="custAge">{{cust.age}}</td>
                     <td><button type="submit" (click)="getCustomerForUpdate(i)"
                             class="btn btn-success btn-space">Update</button></td>
                     <td><button type="submit" (click)="deleteCustomer(i)" class="btn btn-danger">Delete</button></td>
