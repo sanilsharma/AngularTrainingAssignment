@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from './customer';
+import { MyServiceService } from './my-service.service'
 
 @Component({
   selector: 'app-something',
@@ -8,13 +9,15 @@ import { Customer } from './customer';
 })
 export class SomethingComponent implements OnInit {
 
+  getData: any[];
+
   custArray: Array<Customer> = new Array();
   model = new Customer('', 0);
   update = false;
   indexToUpdate = undefined;
   show = this.custArray.length === 0 ? false : true;
 
-  constructor() { }
+  constructor(private _httpService: MyServiceService) { }
 
   ngOnInit() {
   }
@@ -53,5 +56,12 @@ export class SomethingComponent implements OnInit {
     this.update = false;
     this.indexToUpdate = undefined;
     this.model = new Customer('', 0);
+  }
+
+  getUser() {
+    this._httpService.getUserDetails().subscribe((res: any[]) => {
+      console.log(res);
+      this.getData = res;
+    });
   }
 }
