@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SomethingComponent } from './something/something.component';
+import { TestPipePipe } from './something/test-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SomethingComponent
+    SomethingComponent,
+    TestPipePipe
   ],
   imports: [
     BrowserModule,

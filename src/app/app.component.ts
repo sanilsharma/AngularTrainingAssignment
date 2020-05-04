@@ -9,10 +9,12 @@ export class AppComponent {
   title = 'Brillio-Angular8';
   name = 'Angular Training';
   clickMessage = 'Morning';
+  today = new Date();
 
   onClickMe() {
     console.log("Event Fired !!!1");
     this.clickMessage = "Training ! is Active";
+
 
   }
 }

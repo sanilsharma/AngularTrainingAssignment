@@ -42,7 +42,7 @@
                 </tr>
                 <tr *ngFor="let cust of custArray; let i = index">
                     <td id="custName">{{cust.name | uppercase}}</td>
-                    <td id="custAge">{{cust.age}}</td>
+                    <td id="custAge">{{cust.age | testPipe}}</td>
                     <td><button type="submit" (click)="getCustomerForUpdate(i)"
                             class="btn btn-success btn-space">Update</button></td>
                     <td><button type="submit" (click)="deleteCustomer(i)" class="btn btn-danger">Delete</button></td>
