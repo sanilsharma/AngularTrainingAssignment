@@ -16,7 +16,8 @@ const routes: Routes = [
       { path: 'child-one-normal', component: NormalCustomerComponent },
       { path: 'child-one-premium', component: PremiumCustomerComponent }
     ]
-  }
+  },
+  { path: 'order-mgmt', loadChildren: () => import('./order-mgmt/order-mgmt.module').then(m => m.OrderMgmtModule) }
 ];
 
 @NgModule({
