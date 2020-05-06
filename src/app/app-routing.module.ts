@@ -17,7 +17,8 @@ const routes: Routes = [
       { path: 'child-one-premium', component: PremiumCustomerComponent }
     ]
   },
-  { path: 'order-mgmt', loadChildren: () => import('./order-mgmt/order-mgmt.module').then(m => m.OrderMgmtModule) }
+  { path: 'order-mgmt', loadChildren: () => import('./order-mgmt/order-mgmt.module').then(m => m.OrderMgmtModule) },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
