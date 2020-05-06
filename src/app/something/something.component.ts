@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customer } from './customer';
-import { MyServiceService } from './my-service.service'
+import { MyServiceService } from './my-service.service';
+import { NGXLogger } from 'ngx-logger';
 
 @Component({
   selector: 'app-something',
@@ -17,7 +18,12 @@ export class SomethingComponent implements OnInit {
   indexToUpdate = undefined;
   show = this.custArray.length === 0 ? false : true;
 
-  constructor(private _httpService: MyServiceService) { }
+  constructor(private _httpService: MyServiceService, private logger: NGXLogger) {
+
+    this.logger.debug('Your messages got here');
+    this.logger.debug('Constructor called');
+
+  }
 
   ngOnInit() {
   }
@@ -33,6 +39,7 @@ export class SomethingComponent implements OnInit {
     console.log("Customer creation here --->");
     this.custArray.push(new Customer(this.model.name, this.model.age));
     console.log(JSON.stringify(this.custArray));
+    this.logger.debug(JSON.stringify(this.custArray));
     this.model = new Customer('', 0);
     this.show = this.custArray.length === 0 ? false : true;
   }
@@ -61,6 +68,7 @@ export class SomethingComponent implements OnInit {
   getUser() {
     this._httpService.getUserDetails().subscribe((res: any[]) => {
       console.log(res);
+      this.logger.debug("Get User Method called ", res);
       this.getData = res;
     });
   }

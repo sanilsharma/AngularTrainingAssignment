@@ -11,6 +11,8 @@ export class MyServiceService {
   //get // fetch
   getUserDetails() {
     return this.http.get
-      ('https://jsonplaceholder.typicode.com/users');
+      ('http://localhost:7000/users');
+
+    // ('https://jsonplaceholder.typicode.com/users');
   }
 }

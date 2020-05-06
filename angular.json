@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Brillio-Angular8",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -120,6 +120,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Brillio-Angular8"
 }
