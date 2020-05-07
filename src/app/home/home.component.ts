@@ -12,4 +12,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickMessage = 'Morning';
+  onClickMe() {
+    console.log("Event Fired !!!1");
+    this.clickMessage = "Training ! is Active";
+  }
+
 }

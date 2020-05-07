@@ -6,15 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Brillio-Angular8';
-  name = 'Angular Training';
-  clickMessage = 'Morning';
-  today = new Date();
-
-  onClickMe() {
-    console.log("Event Fired !!!1");
-    this.clickMessage = "Training ! is Active";
 
 
-  }
 }

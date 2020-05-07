@@ -18,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { NormalCustomerComponent } from './normal-customer/normal-customer.component';
 import { PremiumCustomerComponent } from './premium-customer/premium-customer.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PremiumCustomerComponent } from './premium-customer/premium-customer.co
     HomeComponent,
     CustomerDetailsComponent,
     NormalCustomerComponent,
-    PremiumCustomerComponent
+    PremiumCustomerComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
